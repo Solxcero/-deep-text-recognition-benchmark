@@ -81,6 +81,7 @@ def benchmark_all_eval(model, criterion, converter, opt, calculate_infer_time=Fa
 
 def validation(model, criterion, evaluation_loader, converter, opt):
     """ validation or evaluation """
+    print(f'Labels|pred|confidence_score')
     n_correct = 0
     norm_ED = 0
     length_of_data = 0
@@ -181,6 +182,7 @@ def validation(model, criterion, evaluation_loader, converter, opt):
                 confidence_score = 0  # for empty pred case, when prune after "end of sentence" token ([s])
             confidence_score_list.append(confidence_score)
             # print(pred, gt, pred==gt, confidence_score)
+            print(f'{gt}|{pred}|{confidence_score}')
 
     accuracy = n_correct / float(length_of_data) * 100
     norm_ED = norm_ED / float(length_of_data)  # ICDAR2019 Normalized Edit Distance
