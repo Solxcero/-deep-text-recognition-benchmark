@@ -81,7 +81,7 @@ def benchmark_all_eval(model, criterion, converter, opt, calculate_infer_time=Fa
 
 def validation(model, criterion, evaluation_loader, converter, opt):
     """ validation or evaluation """
-    print(f'Labels|pred|ox|confidence_score')
+    # print(f'Labels|pred|ox|confidence_score')
     n_correct = 0
     norm_ED = 0
     length_of_data = 0
