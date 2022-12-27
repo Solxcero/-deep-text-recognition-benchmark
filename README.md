@@ -4,7 +4,7 @@
 
 수정된 내용은 다음과 같습니다.
 
-## dataset.py 수정
+## dataset.py 수정 내용
 ### `.next()` -> `next(~)`   
 
 ```python
@@ -28,9 +28,9 @@ def get_batch(self):
 
 
 
-## train.py 수정
+## train.py 수정내용
 
-### `parser.add` 수정필요
+### `parser.add` 
 - 조건 확인하기 
 ```python
 if __name__ == '__main__':
